@@ -21,10 +21,13 @@ let attacks = {
 // NOTE Update Function
 // This needs to Display the Health of GUY on DOM
 function update() {
+  // debugger
   let healthbar = document.getElementById('health')
   let hitcount = document.getElementById('hitCount')
+  document.getElementById('current-health').style.width = `${guyHealth}%`
   healthbar.innerText = `${guyHealth}`
   hitcount.innerText = `${totalHits}`
+
 }
 
 

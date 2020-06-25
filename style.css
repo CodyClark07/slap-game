@@ -6,3 +6,11 @@
   width: 100vw;
   min-height: 10vh;
 }
+
+.img-size {
+  height: 70vh;
+}
+
+.bg-matrix {
+  background-image: url(https://i.imgur.com/E5gN1eK.gif);
+}

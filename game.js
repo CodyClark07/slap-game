@@ -1,5 +1,5 @@
 let guyHealth = 100;
-let totalHits = 0;
+let guysDead = 0;
 let guyIdleImg = './assests/guy-idle.png'
 let guyDeadImg = './assests/guy-dead.png'
 
@@ -35,7 +35,7 @@ function update(input) {
   let hitcount = document.getElementById('hitCount')
   document.getElementById('current-health').style.width = `${guyHealth}%`
   healthbar.innerText = `${guyHealth}`
-  hitcount.innerText = `${totalHits}`
+  hitcount.innerText = `${guysDead}`
   drawGuy(input)
   checkForDead()
 }
@@ -49,8 +49,14 @@ function drawGuy(input) {
   guyImage.src = `${guy}`
   let imageClear = function () {
     guyImage.src = `${guyIdleImg}`
+
   }
-  setTimeout(imageClear, (seconds * .25));
+  if (input !== 'dead') {
+    setTimeout(imageClear, (250));
+  }
+  else if (input == 'dead') {
+    setTimeout(imageClear, (3000));
+  }
 
 }
 
@@ -62,7 +68,6 @@ function slap(input) {
   guyHealth += attacks[input].value
   console.log(attacks[input])
   console.log(`Guyshealth:${guyHealth}`)
-  totalHits++
   document.getElementById('punch-sound').play()
   update(input)
 }
@@ -72,13 +77,11 @@ function checkForDead() {
     drawGuy('dead')
     document.getElementById('die-sound').play()
     guyHealth = 100;
+    guysDead++
   }
-  let clearDeadImg = function () {
-    update()
-  }
-  setTimeout(clearDeadImg, 4000)
-
+  update()
 }
+
 
 
 

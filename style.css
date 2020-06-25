@@ -13,4 +13,5 @@
 
 .bg-matrix {
   background-image: url(https://i.imgur.com/E5gN1eK.gif);
+  background-size: cover;
 }

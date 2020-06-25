@@ -1,6 +1,7 @@
 let guyHealth = 100;
 let totalHits = 0;
 let guyIdleImg = './assests/guy-idle.png'
+let guyDeadImg = './assests/guy-dead.png'
 
 let attacks = {
   slap: {
@@ -31,6 +32,7 @@ function update(input) {
   healthbar.innerText = `${guyHealth}`
   hitcount.innerText = `${totalHits}`
   drawGuy(input)
+  checkForDead()
 }
 
 // NOTE Draw the Dude
@@ -57,6 +59,9 @@ function slap(input) {
   totalHits++
   update(input)
 }
+
+function checkForDead()
+if guyHealth
 
 
 

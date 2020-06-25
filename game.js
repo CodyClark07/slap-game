@@ -60,8 +60,8 @@ function slap(input) {
   update(input)
 }
 
-function checkForDead()
-if guyHealth
+// function checkForDead()
+// if guyHealth
 
 
 

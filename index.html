@@ -15,16 +15,27 @@
 
 <body>
   <!-- SECTION Health Bar -->
-  <header class="container-fluid bg-secondary "></header>
-  <div class="row  health-bar bg-warning m-0">
-    <div class="col-">
-      <span>Health:
-        <span id="health"></span>
+  <header class="container-fluid"></header>
+  <div class="row health-bar bg-dark text-center text-success pt-3 m-0">
+    <div class="col-1 p-0">
+      <span>
+        <h4>Health:</h4>
+
       </span>
       <div>
-        <span>Total Hits:
-          <span id="hitCount"></span>
+        <span>
+          <h4 class="pt-1">Total Hits:</h4>
         </span>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="progress mt-2">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+          aria-valuemin="0" aria-valuemax="100"><span id="health"></span>
+        </div>
+      </div>
+      <div class="py-4">
+        <span id="hitCount"></span>
       </div>
     </div>
   </div>
@@ -36,12 +47,12 @@
 
   <!-- SECTION Buttons Area -->
 
-  <footer class="container-fluid">
-    <div class="row text-center justify-content-center">
+  <footer class="container-fluid bg-dark">
+    <div class="row text-center justify-content-center py-4">
       <div class="col-12">
-        <button class="btn btn-secondary btn-outline-danger" onclick="slap('slap')">slap</button>
-        <button class="btn btn-secondary btn-outline-danger" onclick="slap('punch')">punch</button>
-        <button class="btn btn-secondary btn-outline-danger" onclick="slap('kick')">kick</button>
+        <button class="btn btn-dark btn-outline-success mx-2" onclick="slap('slap')">slap</button>
+        <button class="btn btn-dark btn-outline-success mx-2" onclick="slap('punch')">punch</button>
+        <button class="btn btn-dark btn-outline-success mx-2" onclick="slap('kick')">kick</button>
       </div>
     </div>
   </footer>

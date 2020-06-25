@@ -1,0 +1,8 @@
+.full-height{
+  min-height: 100vh;
+}
+
+.health-bar {
+  width: 100vw;
+  min-height: 10vh;
+}

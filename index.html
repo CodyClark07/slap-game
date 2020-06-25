@@ -10,10 +10,45 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <title>Slap Game</title>
+  <title>Slap Game!</title>
 </head>
 
 <body>
+  <!-- SECTION Health Bar -->
+  <header class="container-fluid bg-secondary "></header>
+  <div class="row  health-bar bg-warning m-0">
+    <div class="col-">
+      <span>Health:
+        <span id="health"></span>
+      </span>
+      <div>
+        <span>Total Hits:
+          <span id="hitCount"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION Game Area -->
+  <main class="container-fluid">
+    THIS IS WHERE WE BEAT UP THE GUY
+  </main>
+
+  <!-- SECTION Buttons Area -->
+
+  <footer class="container-fluid">
+    <div class="row text-center justify-content-center">
+      <div class="col-12">
+        <button class="btn btn-secondary btn-outline-danger" onclick="slap('slap')">slap</button>
+        <button class="btn btn-secondary btn-outline-danger" onclick="slap('punch')">punch</button>
+        <button class="btn btn-secondary btn-outline-danger" onclick="slap('kick')">kick</button>
+      </div>
+    </div>
+  </footer>
+
+
+
+
   <script src="game.js"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
